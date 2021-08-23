@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <the-header />
-    <!-- <the-header  v-if="$store.state.token == '' " /> -->
+    <the-header></the-header>
+   
     <router-view />
     </div>
   
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
 
+import TheHeader from '@/components/TheHeader';
 export default {
 
   name: 'App',
   components: {
-    TheHeader,
+    TheHeader
   }
 }
 </script>
@@ -24,10 +24,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 #app {
-  font-family: 'Poppins';
+  /* font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
+  -moz-osx-font-smoothing: grayscale; */
+  text-align: center;
   color: #000;
  
 }

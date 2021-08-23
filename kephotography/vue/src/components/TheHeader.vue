@@ -1,70 +1,38 @@
 <template>
-  <div class="container-header">
-        <router-link v-if="$store.state.token == '' " v-bind:to="{name: 'home'}" class="logo">FORKTASTIC</router-link>
-        <router-link v-if="$store.state.token != '' " v-bind:to="{name: 'userMeals'}" class="logo">Bienvenue dans notre meal planner, {{$store.state.user.username}}!</router-link>
-        <nav>
-        <router-link class = "header-link" v-bind:to="{name: 'home'}">Home</router-link>
-         <router-link class = "header-link" v-bind:to="{name: 'spoonacular'}">Search Recipes</router-link>
-          <router-link class = "header-link" v-bind:to="{name:'userMeals'}" v-if="$store.state.token != ''">My Meal Plans</router-link> 
-          <router-link class = "header-link" v-bind:to="{name:'myRecipes'}" v-if="$store.state.token != ''">My Recipes</router-link> 
-          <router-link class = "header-link" v-bind:to="{ name: 'register' }" v-if="$store.state.token == ''">Sign Up</router-link>
-         <router-link class = "header-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token == ''">Login</router-link>
-          <router-link class = "header-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
-      </nav>
+  <div id="main">
+      <h1 id="title">K E PHOTOGRAPHY</h1>
+      <div id="nav">
+      <p id="home">Home</p>
+      <p id="about">About</p>
+      <p id="gallery">Gallery</p>
+      <p id="social">Social</p>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'the-header',
-    data() {
-        return {
-          
-        }
-    }
+    name: "the-header"
 
 }
 </script>
 
-<style scoped>
-
-.container-header {
-    box-sizing: border-box;
-    top: 0; 
-    left: 0;
-    height: 4rem;
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    padding: 1rem 2%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 23px;
-    color: grey;
-    text-decoration: none;
+<style>
+#title{
+    color: black;
+    size: 400px;
+    margin: 10px;
+    text-align: center;
     
 }
-
-.logo:hover {
-    color: black;
+#main{
+    background: grey;
 }
-
-.header-link {
-    font-family: 'Poppins';
-    text-decoration: none;
-    color: gray;
-    font-size: 20px;
-    margin-left: 2rem;  
-}
-
-.header-link:hover {
-    color: black;
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 
 </style>
